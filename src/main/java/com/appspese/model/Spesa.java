@@ -17,16 +17,16 @@ import javax.persistence.NamedQuery;
 
 
 @Entity
-@NamedQuery(name = "Spese.findAll", query = "select s from Spese s")
-public class Spese {
+@NamedQuery(name = "Spesa.findAll", query = "select s from Spesa s")
+public class Spesa {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(referencedColumnName = "id")
-	private Utenti chi;
+	private Utente chi;
 
 	@Column
 	private String titolo;
@@ -65,11 +65,11 @@ public class Spese {
 		this.importo = importo;
 	}
 
-	public Utenti getChi() {
+	public Utente getChi() {
 		return chi;
 	}
 
-	public void setChi(Utenti chi) {
+	public void setChi(Utente chi) {
 		this.chi = chi;
 	}
 

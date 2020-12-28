@@ -8,9 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name = "Utenti.findAll", query = "select u from Utenti u")
-public class Utenti {
+@NamedQuery(name = "Utente.findAll", query = "select u from Utente u")
+@NamedQuery(name = Utente.FIND_BY_NOME, query = "select u from Utente u where u.nome = :nome")
+public class Utente {
 
+	public static final String FIND_BY_NOME = "Utente.findByNome";
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

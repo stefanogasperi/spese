@@ -4,8 +4,8 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import com.appspese.controller.ProvaController;
-import com.appspese.controller.SpeseController;
-import com.appspese.controller.UtentiController;
+import com.appspese.controller.SpesaController;
+import com.appspese.controller.UtenteController;
 
 import java.util.Set;
 import java.util.HashSet;
