@@ -37,7 +37,6 @@ public class Spesa {
 	@Column
 	private String descrizione;
 
-	@JsonbDateFormat("yyyy-MM-dd")
 	@Column
 	private LocalDate data;
 

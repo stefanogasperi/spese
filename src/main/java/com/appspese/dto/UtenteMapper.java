@@ -10,7 +10,7 @@ public class UtenteMapper {
 		return utente;
 	}
 
-	public com.appspese.dto.Utente utenteDtoToUtente(Utente utente) {
+	public com.appspese.dto.Utente utenteToUtenteDto(Utente utente) {
 		return new com.appspese.dto.Utente(utente.getNome());
 	}
 
