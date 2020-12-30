@@ -3,7 +3,6 @@ package com.appspese.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.json.bind.annotation.JsonbDateFormat;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;

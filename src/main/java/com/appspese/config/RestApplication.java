@@ -14,13 +14,13 @@ import java.util.HashSet;
 public class RestApplication extends Application {
 
 
-//    public Set<Class<?>> getClasses() {
-//        Set<Class<?>> resources = new HashSet<Class<?>>();
-//  //      resources.add(SpeseController.class);
-//        //      resources.add(UtentiController.class);
-//        resources.add(ProvaController.class);
-//        return resources;
-//    }
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new HashSet<Class<?>>();
+        resources.add(SpesaController.class);
+        resources.add(UtenteController.class);
+        resources.add(ProvaController.class);
+        return resources;
+    }
 
 
 

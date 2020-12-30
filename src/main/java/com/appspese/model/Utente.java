@@ -5,11 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name = "Utente.findAll", query = "select u from Utente u")
-@NamedQuery(name = Utente.FIND_BY_NOME, query = "select u from Utente u where u.nome = :nome")
+@NamedQueries({
+    @NamedQuery(name = "Utente.findAll", query = "select u from Utente u"),
+    @NamedQuery(name = Utente.FIND_BY_NOME, query = "select u from Utente u where u.nome = :nome")
+}) 
 public class Utente {
 
 	public static final String FIND_BY_NOME = "Utente.findByNome";
