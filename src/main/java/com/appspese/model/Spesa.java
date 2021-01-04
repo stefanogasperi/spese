@@ -3,7 +3,6 @@ package com.appspese.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.json.bind.annotation.JsonbDateFormat;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,8 +16,10 @@ import javax.persistence.NamedQuery;
 
 
 @Entity
-@NamedQuery(name = "Spesa.findAll", query = "select s from Spesa s")
+@NamedQuery(name = Spesa.FIND_ALL, query = "select s from Spesa s")
 public class Spesa {
+
+	public static final String FIND_ALL = "Spesa.findAll";
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

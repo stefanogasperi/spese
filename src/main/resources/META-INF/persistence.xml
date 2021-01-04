@@ -13,7 +13,8 @@
          	<!-- CHANGE THIS DATASOURCE ACCORDINGLY TO THE DB YOU'RE USING -->
          	<!-- <property name="hibernate.dialect" value="${hibernate.dialect}"/> -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
-			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> <!-- none, drop-and-create, create  -->
+			<property name="javax.persistence.schema-generation.database.action" 
+					 value="none"/> <!-- none, drop-and-create, create  -->
       </properties>
     </persistence-unit>
     

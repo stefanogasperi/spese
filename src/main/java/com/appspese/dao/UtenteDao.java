@@ -3,8 +3,6 @@ package com.appspese.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
-import javax.persistence.NonUniqueResultException;
 import javax.persistence.PersistenceContext;
 
 import com.appspese.model.Utente;
@@ -31,6 +29,6 @@ public class UtenteDao {
 	}
 
 	public List<Utente> findAll() {
-		return em.createNamedQuery("Utenti.findAll",Utente.class).getResultList();
+		return em.createNamedQuery(Utente.FIND_ALL, Utente.class).getResultList();
 	}
 }

@@ -8,7 +8,6 @@ import javax.persistence.PersistenceContext;
 
 import com.appspese.model.Spesa;
 
-@NamedQuery(name = "Spesa.findAll", query = "select s from Spesa s")
 public class SpesaDao {
 
 	@PersistenceContext
@@ -29,7 +28,7 @@ public class SpesaDao {
 	}
 	
 	public List<Spesa> findAll() {
-		return em.createNamedQuery("Spese.findAll", Spesa.class).getResultList();
+		return em.createNamedQuery(Spesa.FIND_ALL, Spesa.class).getResultList();
 	}
 
 }
